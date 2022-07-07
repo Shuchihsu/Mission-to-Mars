@@ -1,0 +1,16 @@
+name: data-10-missiontomars
+channels:
+  - conda-forge
+dependencies:
+  - python            =3.10
+  - beautifulsoup4    =4.11.*
+  - flask             =2.1.*
+  - flask-pymongo     =2.3.*
+  - jupyterlab        =3.4.*
+  - pandas            =1.4.*
+  - pip               =22.1.*
+  - pymongo           =4.1.*
+  - selenium          =4.2.*
+  - webdriver-manager =3.7.*
+  - pip:
+    - splinter        ==0.18.*
