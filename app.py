@@ -8,7 +8,7 @@ app = Flask(__name__)
 
 # Use flask_pymongo to set up Mimongo connection
 # tells python that our app will connect to Mongo using a URI(a uniform resource identifies similar to a URL)
-app.config["MONGO_URI"] = "mongoda://localhost:27017/mars_app"
+app.config["MONGO_URI"] = "mongodb://localhost:27017/mars_app"
 mongo = PyMongo(app)
 
 # Tells Flask what to display when we're looking at the home page, index.html
@@ -38,6 +38,6 @@ def scrape():
     mars.update_one({},{"$set":mars_data},upsert = True)
     return redirect('/',code = 302)
     # Tells Flask to run
-    if __name__ == "__main__":
-        app.run()
-        #if __name__ == “main”: is used to execute some code only if the file was run directly, and not imported.???
+if __name__ == "__main__":
+    app.run()
+    #if __name__ == “main”: is used to execute some code only if the file was run directly, and not imported.???
