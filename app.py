@@ -1,12 +1,12 @@
 from flask import Flask, render_template, redirect, url_for
-from flask_pymongo import PyMonge
+from flask_pymongo import PyMongo
 import scraping
 # Create the Flask instance
 # __name__ is the name of the current Python module. 
 # The app needs to know where it’s located to set up some paths, and __name__ is a convenient way to tell it that.
 app = Flask(__name__)
 
-# Use flask_pymongo to set up mongo connection
+# Use flask_pymongo to set up Mimongo connection
 # tells python that our app will connect to Mongo using a URI(a uniform resource identifies similar to a URL)
 app.config["MONGO_URI"] = "mongoda://localhost:27017/mars_app"
 mongo = PyMongo(app)
